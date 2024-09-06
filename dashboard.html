@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body id="body">
+    <div class="container">
+        <!-- Top Image Section -->
+        <div class="top-image"></div>
+        <img src="mountain.png" alt="Halfway Image" class="halfway-image"> 
+        
+        <header class="header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Dashboard</h1>
+            <button id="modeToggle" class="mode-toggle">🌞</button>
+        </header>
+        
+        <section class="content-wrapper">
+        
+            <div class="main-content">
+                <div class="dashboard-cards">
+                    <div class="card">Products Sold <span>4565</span></div>
+                    <div class="card">Net Profit <span>$8541</span></div>
+                    <div class="card">New Customers <span>4565</span></div>
+                    <div class="card">Customer Satisfaction <span>99%</span></div>
+                </div>
+                <div class="chart-section">
+                    <h3>Product Sales</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+            <a href="#">Reddit</a>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
