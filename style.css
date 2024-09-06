@@ -1,0 +1,140 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+.background {
+  background-image: url("nature1.png"); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: -1; /* Behind the text but above the background image */
+}
+.center-text {
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); */
+  z-index: 2; /* Make sure text is above overlay */
+  background: linear-gradient(45deg, #c08f8ff1, #83cadbd1, #6ced88d7);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease infinite;
+}
+.sub-text {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); */
+  z-index: 2;
+  background: linear-gradient(45deg,  #c08f8ff1, #83cadbd1, #6ced88d7);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.bold-underline {
+  position: absolute; /* Position relative to contain the pseudo-element */
+  width: 80%; /* Adjust width as needed */
+  height: 5px; /* Thickness of the underline */
+  background: linear-gradient(45deg,  #c08f8ff1, #83cadbd1, #6ced88d7);
+  background-size: 400% 400%;
+  animation: gradient-animation 5s ease infinite;
+  margin-bottom: -540px;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+/* Button Styles */
+button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  margin: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Gradient Button Styles */
+.dashboard-button {
+  background: linear-gradient(45deg, #53ad7d, #2575fc);
+  color: white;
+}
+
+.get-to-know-button {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 3;
+}
+.logo {
+  height: 80px; /* Adjust the size of your logo */
+  margin-top: -4px;
+  margin-left: 10px;
+}
+.login {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from the text */
+    font-size: 1.3em; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    margin-right: 20px; 
+    margin-top: -30px;
+}
+
+.login:hover {
+    color: #ccc; /* Lighter color on hover to indicate interactivity */
+}
+
+
